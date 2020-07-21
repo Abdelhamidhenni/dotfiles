@@ -1,0 +1,35 @@
+version: "3.5"
+services:
+  # Portainer
+  portainer:
+    image: portainer/portainer:latest
+    container_name: portainer
+    restart: always
+    ports:
+      - 9000:9000
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/florent/docker/portainer/data:/data
+
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle
+    restart: always
+    ports:
+      - 90:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: unless-stopped
+    ports:
+      - 9010:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@domain.com
+      - PGADMIN_DEFAULT_PASSWORD=florent

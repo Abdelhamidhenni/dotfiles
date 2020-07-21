@@ -1,0 +1,46 @@
+[global_config]
+  handle_size = 5
+  geometry_hinting = True
+  tab_position = bottom
+  hide_from_taskbar = True
+  title_transmit_fg_color = "#6272a4"
+  title_transmit_bg_color = "#d3d7cf"
+  title_inactive_fg_color = "#6272a4"
+  inactive_color_offset = 0.7083333333333334
+  always_split_with_profile = True
+[keybindings]
+  page_up = <Alt>Page_Up
+  page_down = <Alt>Page_Down
+[profiles]
+  [[default]]
+    background_color = "#282a36"
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#d3d7cf"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#2e3436:#ff5555:#50fa7b:#f1fa8c:#6272a4:#ff79c6:#8be9fd:#d3d7cf:#555753:#ff5555:#50fa7b:#f1fa8c:#729fcf:#ff79c6:#8be9fd:#eeeeec"
+    login_shell = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 7e6193ff-4863-44dc-a21f-0896bba318dc
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 782:273
+      #size = 742, 454
+      size = 1080, 666
+      title = florent@xps: ~
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 7e6193ff-4863-44dc-a21f-0896bba318dc
+[plugins]
