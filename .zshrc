@@ -40,8 +40,10 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_DIR_TRUNC_REPO=true
 
 # User configuration
+path=($HOME/bin /snap/bin $path)
 
-for file in ~/.dotfiles/{options,aliases,exports,functions}.zsh; do
+
+for file in ~/.dotfiles/{options,aliases,exports,functions}.{zsh,sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -50,3 +52,4 @@ for file in ~/.zsh/*.{zsh,sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
+
