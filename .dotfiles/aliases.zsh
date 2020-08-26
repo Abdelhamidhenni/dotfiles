@@ -53,11 +53,10 @@ alias path='echo -e ${PATH//:/\\n}'
 alias auto-update="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias ip-local="ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 alias ssh-eval-ntp='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/NTP.pem'
-alias docker-remove-all='docker rm $(docker ps -a -q); docker rmi $(docker images -q)'
 alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /home/florent/docker/lazydocker//config:/.config/jesseduffield/lazydocker lazyteam/lazydocker'
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias git-remove-branches="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d"
+alias dotfiles='git --git-dir=$HOME/.dotfiles-git/ --work-tree=$HOME'
 
-alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cat='bat'

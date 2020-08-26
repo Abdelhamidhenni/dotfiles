@@ -67,6 +67,7 @@
 	s = status -s
 	co = !git checkout
  	br = !git branch
+  	trash = !git reset --hard HEAD && git clean -fd
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -87,8 +88,6 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
-
-  	trash = !git reset --hard HEAD && git clean -fd
 
 	# List aliases
 	aliases = config --get-regexp alias
