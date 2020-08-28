@@ -1,4 +1,4 @@
-export ZSH=/home/florent/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="spaceship"
 
@@ -29,7 +29,6 @@ plugins=(
 	nvm
 )
 
-# fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,14 +40,15 @@ SPACESHIP_DIR_TRUNC_REPO=true
 
 # User configuration
 path=($HOME/bin /snap/bin $path)
+# fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
-for file in ~/.dotfiles/{options,aliases,exports,functions}.{zsh,sh}; do
+for file in $HOME/.dotfiles/{options,aliases,exports,functions}.{zsh,sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 
-if [[ -d ~/.zsh ]]; then
-	for file in ~/.zsh/*.{zsh,sh}; do
+if [[ -d $HOME/.zsh ]]; then
+	for file in $HOME/.zsh/*.{zsh,sh}; do
 		[ -r "$file" ] && [ -f "$file" ] && source "$file"
 	done
 	unset file

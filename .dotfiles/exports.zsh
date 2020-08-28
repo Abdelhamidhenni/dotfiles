@@ -1,6 +1,6 @@
 export TIPZ_TEXT='💡 '
 
-export CAPTAIN_ROOT=/home/florent/projects/webflo
+export CAPTAIN_ROOT=$HOME/projects/webflo
 export WEBFLO_DIR=$HOME/.webflo
 
 export LANG='en_US.UTF-8'

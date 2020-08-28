@@ -52,7 +52,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 alias auto-update="sudo apt -y update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 alias ip-local="ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-alias ssh-eval-ntp='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/NTP.pem'
+alias ssh-add='eval "$(ssh-agent -s)" && ssh-add'
 alias lazydocker='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /home/florent/docker/lazydocker//config:/.config/jesseduffield/lazydocker lazyteam/lazydocker'
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
