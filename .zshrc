@@ -40,7 +40,7 @@ SPACESHIP_DIR_TRUNC_REPO=true
 
 # User configuration
 path=($HOME/bin /snap/bin $path)
-# fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+#fpath=($HOME/projects/webflo/wam $fpath)
 
 for file in $HOME/.dotfiles/{options,aliases,exports,functions}.{zsh,sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
