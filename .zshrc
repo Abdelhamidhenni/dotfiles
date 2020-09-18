@@ -39,7 +39,7 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_DIR_TRUNC_REPO=true
 
 # User configuration
-path=($HOME/bin /snap/bin $path)
+path=($HOME/bin /snap/bin /usr/local/go/bin $path)
 #fpath=($HOME/projects/webflo/wam $fpath)
 
 for file in $HOME/.dotfiles/{options,aliases,exports,functions}.{zsh,sh}; do
